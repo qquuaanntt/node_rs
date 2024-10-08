@@ -1,0 +1,52 @@
+[package]
+name = "node_rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+
+# reth
+reth-primitives-traits = { git = "https://github.com/paradigmxyz/reth", package = "reth-primitives-traits", version = "1.0.8", tag = "v1.0.8", default-features = false}
+reth-provider = { git = "https://github.com/paradigmxyz/reth", package = "reth-provider", version = "1.0.8", tag = "v1.0.8" }
+reth-rpc = { git = "https://github.com/paradigmxyz/reth", package = "reth-rpc", version = "1.0.8", tag = "v1.0.8" }
+reth-revm = { git = "https://github.com/paradigmxyz/reth", package = "reth-revm", version = "1.0.8", tag = "v1.0.8" }
+reth-rpc-api = { git = "https://github.com/paradigmxyz/reth", package = "reth-rpc-api", version = "1.0.8", tag = "v1.0.8" }
+reth-libmdbx = { git = "https://github.com/paradigmxyz/reth", package = "reth-libmdbx", version = "1.0.8", tag = "v1.0.8" }
+reth-blockchain-tree = { git = "https://github.com/paradigmxyz/reth", package = "reth-blockchain-tree", version = "1.0.8", tag = "v1.0.8" }
+reth-beacon-consensus = { git = "https://github.com/paradigmxyz/reth", package = "reth-beacon-consensus", version = "1.0.8", tag = "v1.0.8" }
+reth-transaction-pool = { git = "https://github.com/paradigmxyz/reth", package = "reth-transaction-pool", version = "1.0.8", tag = "v1.0.8" }
+reth-tasks = { git = "https://github.com/paradigmxyz/reth", package = "reth-tasks", version = "1.0.8", tag = "v1.0.8" }
+reth-ipc = { git = "https://github.com/paradigmxyz/reth", package = "reth-ipc", version = "1.0.8", tag = "v1.0.8" }
+reth-network-api = { git = "https://github.com/paradigmxyz/reth", package = "reth-network-api", version = "1.0.8", tag = "v1.0.8" }
+reth-eth-wire = { git = "https://github.com/paradigmxyz/reth", package = "reth-eth-wire", version = "1.0.8", tag = "v1.0.8" }
+#reth-node-ethereum = { git = "https://github.com/paradigmxyz/reth", package = "reth-node-ethereum", version = "1.0.8", tag = "v1.0.8" }
+reth-rpc-eth-api = { git = "https://github.com/paradigmxyz/reth", package = "reth-rpc-eth-api", version = "1.0.8", tag = "v1.0.8" }
+
+
+
+
+# alloy
+alloy-provider = { version = "0.3.6", default-features = false, features = ["ipc", "ws", "pubsub", "reqwest"] }
+alloy-rpc-client = { version = "0.3.6", default-features = false, features = ["ipc", "ws", "pubsub"] }
+alloy-transport-ipc = { version = "0.3.6", default-features = false }
+alloy-transport-http = { version = "0.3.6", default-features = false }
+alloy-pubsub = { version = "0.3.6", default-features = false }
+alloy-rpc-types-trace = { version = "0.3.6", default-features = false }
+alloy-transport = { version = "0.3.6", default-features = false }
+alloy-json-rpc = { version = "0.3.6", default-features = false }
+alloy-rpc-types = { version = "0.3.6", default-features = false, features = ["eth"] }
+alloy-sol-types = { version = "0.8.0", features = ["json"] }
+alloy-sol-macro = { version = "0.8.0", features = ["json"] }
+alloy-primitives = { version = "0.8.0", default-features = false, features = ["rlp"] }
+
+
+
+# async
+tokio = { version =  "1", features = ["full"] }
+futures = "0.3"
+
+
+# misc
+dotenv = "0.15.0"
+eyre = "0.6.5"

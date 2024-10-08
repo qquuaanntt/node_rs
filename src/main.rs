@@ -11,18 +11,27 @@ use futures::StreamExt;
 async fn main() -> eyre::Result<()> {
     dotenv::dotenv().ok();
 
+    println!("sourced .env");
+
     let builder = ClientBuilder::default()
         .ws(WsConnect::new(
             &std::env::var("WS_URL").expect("WS_URL not in .env"),
         ))
         .await?;
 
+    println!("made builder");
+
     let client: RootProvider<PubSubFrontend, Ethereum> = RootProvider::new(builder);
 
-    let mut stream: alloy_pubsub::SubscriptionStream<Transaction> = client
-        .subscribe_full_pending_transactions()
-        .await?
-        .into_stream();
+    println!("made client");
+
+    let sub = client.subscribe_full_pending_transactions().await?;
+
+    println!("made subscription");
+
+    let mut stream: alloy_pubsub::SubscriptionStream<Transaction> = sub.into_stream();
+
+    println!("made stream");
 
     while let Some(tx) = stream.next().await {
         println!("found new transaction: {:?}", tx.hash);

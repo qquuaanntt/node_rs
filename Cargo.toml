@@ -20,7 +20,6 @@ reth-tasks = { git = "https://github.com/paradigmxyz/reth", package = "reth-task
 reth-ipc = { git = "https://github.com/paradigmxyz/reth", package = "reth-ipc", version = "1.0.8", tag = "v1.0.8" }
 reth-network-api = { git = "https://github.com/paradigmxyz/reth", package = "reth-network-api", version = "1.0.8", tag = "v1.0.8" }
 reth-eth-wire = { git = "https://github.com/paradigmxyz/reth", package = "reth-eth-wire", version = "1.0.8", tag = "v1.0.8" }
-#reth-node-ethereum = { git = "https://github.com/paradigmxyz/reth", package = "reth-node-ethereum", version = "1.0.8", tag = "v1.0.8" }
 reth-rpc-eth-api = { git = "https://github.com/paradigmxyz/reth", package = "reth-rpc-eth-api", version = "1.0.8", tag = "v1.0.8" }
 
 
